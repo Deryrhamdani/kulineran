@@ -20,3 +20,21 @@
     border-radius: 15px;
     border-color: transparent;
 }
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    text-transform: uppercase;
+
+}
+
+.breadcrumb-item.active {
+    font-family: bold;
+    color: black;
+    text-transform: uppercase;
+
+}
+
+.text-dark {
+    text-decoration: none;
+}

@@ -12,9 +12,9 @@
             >Lihat Semua
           </router-link>
         </div>
-        <div class="row mb-4">
+        <div class="row mb-4 gridWrap">
           <div
-            class="col md-4 mt-4"
+            class="col md-4 mt-4 g-3"
             v-for="product in products"
             :key="product.id"
           >
@@ -22,6 +22,7 @@
           </div>
         </div>
         <Footer />
+        <Copyright />
       </div>
     </div>
   </div>
@@ -33,6 +34,7 @@ import Navbar from "@/components/Navbar.vue";
 import Hero from "@/components/Hero.vue";
 import CardProduct from "@/components/CardProduct.vue";
 import Footer from "@/components/Footer.vue";
+import Copyright from "@/components/Copyright.vue";
 import axios from "axios";
 
 export default {
@@ -42,6 +44,7 @@ export default {
     Hero,
     CardProduct,
     Footer,
+    Copyright,
   },
   data() {
     return {
@@ -61,3 +64,22 @@ export default {
   },
 };
 </script>
+
+<style>
+.gridWrap {
+  width: 1024px;
+  margin: auto;
+}
+
+.gridWrap ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.gridWrap ul img {
+  width: 100%;
+}</style>
